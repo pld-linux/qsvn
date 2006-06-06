@@ -8,7 +8,6 @@ Group:		X11/Applications
 Source0:	http://download.berlios.de/qsvn/%{name}-%{version}-src.tar.gz
 # Source0-md5:	a96d635b4494ce629c2e095b0d078d61
 Source1:	%{name}.desktop
-# Source1-md5:	c0b998ade1a72f40733e38a4f905b3c6
 Patch0:		%{name}-includes.patch
 URL:		http://ar.oszine.de/projects/qsvn/
 BuildRequires:	Qt3Support-devel
