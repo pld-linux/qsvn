@@ -1,0 +1,18 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=QSvn
+GenericName=SVN client
+GenericName[de]=Graphische Oberfläche für SVN
+GenericName[pl]=Klient SVN
+Exec=qsvn %i %m -caption "%c"
+Icon=qsvn
+Type=Application
+Comment=A Subversion client for Qt
+Comment[de]=Ein Subversionclient für Qt
+Comment[nl]=Een Subversion-client voor Qt
+Comment[pl]=Klient Subversion dla Qt
+Terminal=false
+MimeType=inode/directory
+ServiceTypes=KParts/ReadOnlyPart,Browser/View
+X-KDE-BrowserView-Args=DetailedList
+Categories=Qt;Development;RevisionControl;

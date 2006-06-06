@@ -1,0 +1,23 @@
+--- qsvn.pro	2006-05-20 12:46:51.000000000 +0200
++++ qsvn.pro-pld	2006-06-06 04:48:15.184174800 +0200
+@@ -8,7 +8,8 @@
+   OBJECTS_DIR = .obj
+ 
+   INCLUDEPATH += /usr/include/subversion-1 \
+-                 /usr/include/apr-0
++                 /usr/include/apr \
++		 /usr/include/apr-util
+ 
+   LIBS += -lsvn_client-1 \
+           -lsvn_delta-1 \
+@@ -18,8 +19,8 @@
+           -lsvn_repos-1 \
+           -lsvn_subr-1 \
+           -lsvn_wc-1 \
+-          -lapr-0 \
+-          -laprutil-0
++          -lapr-1 \
++          -laprutil-1
+ }
+ 
+ win32 {
