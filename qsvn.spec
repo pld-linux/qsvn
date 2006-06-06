@@ -2,7 +2,7 @@ Summary:	QSvn - Subversion Client
 Summary(pl):	QSvn - Klient Subversion
 Name:		qsvn
 Version:	0.4.0
-Release:	0.2
+Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://download.berlios.de/qsvn/%{name}-%{version}-src.tar.gz
@@ -40,10 +40,10 @@ qt4-qmake
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_desktopdir},%{_iconsdir}/crystalsvg/64x64/apps/}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_desktopdir},%{_pixmapsdir}}
 install bin/qsvn $RPM_BUILD_ROOT%{_bindir}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
-install images/%{name}.png $RPM_BUILD_ROOT%{_iconsdir}/crystalsvg/64x64/apps
+install images/%{name}.png $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -53,4 +53,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc ChangeLog INSTALL README
 %attr(755,root,root) %{_bindir}/*
 %{_desktopdir}/%{name}.desktop
-%{_iconsdir}/crystalsvg/64x64/apps/%{name}.png
+%{_pixmapsdir}/%{name}.png
