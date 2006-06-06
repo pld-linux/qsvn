@@ -1,4 +1,5 @@
 Summary:	QSvn - Subversion Client
+Summary(de):	QSvn - Ein Subversion Klient
 Summary(pl):	QSvn - Klient Subversion
 Name:		qsvn
 Version:	0.4.0
@@ -23,6 +24,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 QSvn is a graphical Subversion Client for Linux, UNIX, Windows and Mac
 OS X. We use the Subversion API for all Subversion actions and the Qt4
 C++ toolkit from Trolltech for platform independent programming.
+
+%description -l de
+QSvn ist ein graphischer Subversion Klient für Linux, Unix, Windows
+und Mac OS X. Es benutzt die Subversion API für alle Befehle die etwas
+mit Subversion zu tun haben, Qt4 und C++ um auf sovielen Platformen
+wie möglich zu programieren.
 
 %description -l pl
 QSvn jest graficznym klientem Subversion dla Linuksa, Uniksa, Windowsa
