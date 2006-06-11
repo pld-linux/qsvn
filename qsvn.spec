@@ -32,7 +32,7 @@ mit Subversion zu tun haben, Qt4 und C++ um auf sovielen Platformen
 wie möglich zu programieren.
 
 %description -l pl
-QSvn jest graficznym klientem Subversion dla Linuksa, Uniksa, Windowsa
+QSvn jest graficznym klientem Subversion dla Linuksa, Uniksa, Windows
 oraz Mac OS X. U¿ywa API Subversion dla wszystkich czynno¶ci
 zwi±zanych z svnem, Qt4 i C++ do wieloplatformowego programowania.
 
