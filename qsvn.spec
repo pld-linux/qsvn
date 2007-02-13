@@ -1,6 +1,6 @@
 Summary:	QSvn - Subversion Client
-Summary(de.UTF-8):   QSvn - Ein Subversion Klient
-Summary(pl.UTF-8):   QSvn - Klient Subversion
+Summary(de.UTF-8):	QSvn - Ein Subversion Klient
+Summary(pl.UTF-8):	QSvn - Klient Subversion
 Name:		qsvn
 Version:	0.4.0
 Release:	1
