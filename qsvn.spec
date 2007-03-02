@@ -11,10 +11,11 @@ Source0:	http://download.berlios.de/qsvn/%{name}-%{version}-src.tar.gz
 Source1:	%{name}.desktop
 Patch0:		%{name}-qt4tools.patch
 URL:		http://ar.oszine.de/projects/qsvn/
-BuildRequires:	cmake
 BuildRequires:	Qt3Support-devel
 BuildRequires:	QtCore-devel
 BuildRequires:	QtGui-devel
+BuildRequires:	cmake >= 2.4.0
+BuildRequires:	mysql-devel
 BuildRequires:	qt4-build
 BuildRequires:	qt4-qmake
 BuildRequires:	rpmbuild(macros) >= 1.129
@@ -42,9 +43,11 @@ związanych z svnem, Qt4 i C++ do wieloplatformowego programowania.
 %patch0 -p1
 
 %build
-mkdir build
+install -d build
 cd build
-cmake -D CMAKE_BUILD_TYPE="Release" ../src
+%{__cmake} \
+	-DCMAKE_BUILD_TYPE="Release" \
+	../src
 %{__make}
 
 %install
