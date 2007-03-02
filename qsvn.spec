@@ -2,15 +2,16 @@ Summary:	QSvn - Subversion Client
 Summary(de.UTF-8):	QSvn - Ein Subversion Klient
 Summary(pl.UTF-8):	QSvn - Klient Subversion
 Name:		qsvn
-Version:	0.4.0
+Version:	0.5.0
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://download.berlios.de/qsvn/%{name}-%{version}-src.tar.gz
-# Source0-md5:	a96d635b4494ce629c2e095b0d078d61
+# Source0-md5:	03927a26532996fbb79a47c40b8bf181
 Source1:	%{name}.desktop
-Patch0:		%{name}-includes.patch
+Patch0:		%{name}-qt4tools.patch
 URL:		http://ar.oszine.de/projects/qsvn/
+BuildRequires:	cmake
 BuildRequires:	Qt3Support-devel
 BuildRequires:	QtCore-devel
 BuildRequires:	QtGui-devel
@@ -38,26 +39,33 @@ związanych z svnem, Qt4 i C++ do wieloplatformowego programowania.
 
 %prep
 %setup -q
-%patch0 -p0
+%patch0 -p1
 
 %build
-export QTDIR=%{_prefix}
-qt4-qmake
+mkdir build
+cd build
+cmake -D CMAKE_BUILD_TYPE="Release" ../src
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_desktopdir},%{_pixmapsdir}}
-install bin/qsvn $RPM_BUILD_ROOT%{_bindir}
+
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_libdir},%{_desktopdir},%{_pixmapsdir}}
+install build/bin/qsvn $RPM_BUILD_ROOT%{_bindir}
+install build/bin/libsvnqt-qt4.so.3.0.0 $RPM_BUILD_ROOT%{_libdir}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
-install images/%{name}.png $RPM_BUILD_ROOT%{_pixmapsdir}
+install src/images/%{name}.png $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post	-p /sbin/ldconfig
+%postun	-p /sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog INSTALL README
 %attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_libdir}/lib*.so.*.*.*
 %{_desktopdir}/%{name}.desktop
 %{_pixmapsdir}/%{name}.png
