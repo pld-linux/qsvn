@@ -18,7 +18,7 @@ BuildRequires:	cmake >= 2.4.0
 BuildRequires:	mysql-devel
 BuildRequires:	qt4-build
 BuildRequires:	qt4-qmake
-BuildRequires:	rpmbuild(macros) >= 1.129
+BuildRequires:	rpmbuild(macros) >= 1.293
 BuildRequires:	subversion-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -45,7 +45,7 @@ związanych z svnem, Qt4 i C++ do wieloplatformowego programowania.
 %build
 install -d build
 cd build
-%{__cmake} \
+%cmake \
 	-DCMAKE_BUILD_TYPE="Release" \
 	../src
 %{__make}
