@@ -1,0 +1,4 @@
+- BR: mysql-devel
+- sort BR's
+- use %{__cmake} macro
+- use install -d instead of mkdir
