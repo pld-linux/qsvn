@@ -2,12 +2,12 @@ Summary:	QSvn - Subversion Client
 Summary(de.UTF-8):	QSvn - Ein Subversion Klient
 Summary(pl.UTF-8):	QSvn - Klient Subversion
 Name:		qsvn
-Version:	0.5.0
-Release:	3
+Version:	0.6.0
+Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://download.berlios.de/qsvn/%{name}-%{version}-src.tar.gz
-# Source0-md5:	03927a26532996fbb79a47c40b8bf181
+Source0:	http://ar.oszine.de/projects/qsvn/chrome/site/%{name}-%{version}-src.tar.gz
+# Source0-md5:	5a6e0f9be8dc504acbd1a68d6eb8ff7b
 Source1:	%{name}.desktop
 Patch0:		%{name}-qt4tools.patch
 URL:		http://ar.oszine.de/projects/qsvn/
@@ -55,7 +55,7 @@ rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_libdir},%{_desktopdir},%{_pixmapsdir}}
 install build/bin/qsvn $RPM_BUILD_ROOT%{_bindir}
-install build/bin/libsvnqt-qt4.so.3.0.0 $RPM_BUILD_ROOT%{_libdir}
+install build/lib/libsvnqt-qt4.so.*.*.* $RPM_BUILD_ROOT%{_libdir}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install src/images/%{name}.png $RPM_BUILD_ROOT%{_pixmapsdir}
 
