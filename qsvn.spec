@@ -16,8 +16,8 @@ BuildRequires:	QtCore-devel
 BuildRequires:	QtGui-devel
 BuildRequires:	cmake >= 2.4.0
 BuildRequires:	mysql-devel
-BuildRequires:	qt4-build
-BuildRequires:	qt4-qmake
+BuildRequires:	qt4-build >= 4.3.3-3
+BuildRequires:	qt4-qmake >= 4.3.3-3
 BuildRequires:	rpmbuild(macros) >= 1.293
 BuildRequires:	subversion-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
