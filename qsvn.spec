@@ -9,7 +9,6 @@ Group:		X11/Applications
 Source0:	http://ar.oszine.de/projects/qsvn/chrome/site/%{name}-%{version}-src.tar.gz
 # Source0-md5:	5a6e0f9be8dc504acbd1a68d6eb8ff7b
 Source1:	%{name}.desktop
-Patch0:		%{name}-qt4tools.patch
 URL:		http://ar.oszine.de/projects/qsvn/
 BuildRequires:	Qt3Support-devel
 BuildRequires:	QtCore-devel
