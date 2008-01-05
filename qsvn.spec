@@ -40,12 +40,11 @@ związanych z svnem, Qt4 i C++ do wieloplatformowego programowania.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 install -d build
 cd build
-%cmake \
+%cmake --debug-output \
 	-DCMAKE_BUILD_TYPE="Release" \
 	../src
 %{__make}
