@@ -44,7 +44,7 @@ związanych z svnem, Qt4 i C++ do wieloplatformowego programowania.
 %build
 install -d build
 cd build
-%cmake --debug-output \
+%cmake \
 	-DCMAKE_BUILD_TYPE="Release" \
 	../src
 %{__make}
