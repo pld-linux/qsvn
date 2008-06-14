@@ -3,7 +3,7 @@ Summary(de.UTF-8):	QSvn - Ein Subversion Klient
 Summary(pl.UTF-8):	QSvn - Klient Subversion
 Name:		qsvn
 Version:	0.6.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications
 Source0:	http://ar.oszine.de/projects/qsvn/chrome/site/%{name}-%{version}-src.tar.gz
