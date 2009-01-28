@@ -2,14 +2,14 @@ Summary:	QSvn - Subversion Client
 Summary(de.UTF-8):	QSvn - Ein Subversion Klient
 Summary(pl.UTF-8):	QSvn - Klient Subversion
 Name:		qsvn
-Version:	0.6.1
-Release:	2
+Version:	0.8.0
+Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://ar.oszine.de/projects/qsvn/chrome/site/%{name}-%{version}-src.tar.gz
-# Source0-md5:	7c3d53e06d85b5938e4835ab14023900
+Source0:	http://www.anrichter.net/projects/qsvn/chrome/site/%{name}-%{version}-src.tar.gz
+# Source0-md5:	e3ed92cbea9af08f8a8a471656b511dd
 Source1:	%{name}.desktop
-URL:		http://ar.oszine.de/projects/qsvn/
+URL:		http://www.anrichter.net/projects/qsvn/
 BuildRequires:	Qt3Support-devel
 BuildRequires:	QtCore-devel
 BuildRequires:	QtGui-devel
@@ -53,7 +53,7 @@ rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_libdir},%{_desktopdir},%{_pixmapsdir}}
 install build/bin/qsvn $RPM_BUILD_ROOT%{_bindir}
-install build/lib/libsvnqt-qt4.so.*.*.* $RPM_BUILD_ROOT%{_libdir}
+install build/%{_lib}/libsvnqt4.so.*.*.* $RPM_BUILD_ROOT%{_libdir}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install src/images/%{name}.png $RPM_BUILD_ROOT%{_pixmapsdir}
 
